@@ -6,6 +6,11 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
   },
+  // watch: true,
+  devtool: '#inline-source-map',
+  devServer: {
+    contentBase: '.',
+  },
   module: {
     rules: [
       {
@@ -35,6 +40,4 @@ module.exports = {
       },
     ],
   },
-  watch: true,
-  devtool: 'source-map',
 };
