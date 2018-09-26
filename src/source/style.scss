@@ -1,3 +1,56 @@
-#app {
-  font-size: 30px;
+#header {
+  display: flex;
+  justify-content: space-between;
+  #title {
+    >h4 {
+      display: inline-block;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  #menu {
+    display: flex;
+    align-items: center;
+    >div {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      &:hover {
+        background-color: #aaa;
+      }
+    }
+  }
+}
+
+#main {
+  .big-image {
+    >img {
+      width: 100%;
+    }
+  }
+  .food-menu {
+    width: 100%;
+    display: flex;
+    >div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      margin-top: -6rem;
+      background-color: #FFE180;
+      >img {
+        width: 100%;
+        opacity: 0.3;
+      }
+      >span {
+        position: absolute;
+      }
+    }
+  }
 }
