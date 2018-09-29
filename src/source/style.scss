@@ -1,10 +1,16 @@
 @import '@material/layout-grid/mdc-layout-grid';
+@import '@material/card/mdc-card';
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
 }
 
 .w100 {
   width: 100%;
+}
+
+.h100 {
+  height: 100%;
 }
 
 .blur {
@@ -59,6 +65,7 @@ main {
       >.square {
         background-position: center;
         background-size: 100%;
+        background-repeat: no-repeat;
         width: 100%;
         padding-bottom: 100%;
         opacity: 0.15;
@@ -77,6 +84,75 @@ main {
     .mdc-layout-grid__cell:nth-child(3) {
       >.square {
         background-image: url("../assets/images/food-photographer-jennifer-pallian-306919-unsplash.jpg");
+      }
+    }
+  }
+  .article {
+    height: 420px;
+    @media (min-width: 1200px) {
+      height: 500px;
+    }
+    background-color: #EAF0ED;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    .article-text {
+      writing-mode: vertical-rl;
+      font-size: 16px;
+      color: #8DA291;
+    }
+    .article-img {
+      margin-top: -7%;
+      height: 124%;
+      background-image: url("../assets/images/le-buzz-576478-unsplash.jpg");
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    .article-img-text {
+      margin-top: -18%;
+      height: 100%;
+      background-image: url("../assets/images/lg-為什麼選擇了做甜點.svg");
+      background-position: center;
+      background-size: fill;
+      background-repeat: no-repeat;
+    }
+    .article-img2 {
+      margin-top: -7%;
+      height: 124%;
+      background-image: url("../assets/images/monika-grabkowska-325047-unsplash.jpg");
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    .article-img-text2 {
+      margin-top: -18%;
+      height: 100%;
+      background-image: url("../assets/images/lg-為什麼一定要吃甜點.svg");
+      background-position: center;
+      background-size: fill;
+      background-repeat: no-repeat;
+    }
+    .article-img-text3 {
+      margin-top: -18%;
+      height: 100%;
+      background-image: url("../assets/images/lg-想吃甜點是不需要理由的.svg");
+      background-position: center;
+      background-size: fill;
+      background-repeat: no-repeat;
+    }
+    &.article-empty {
+      background-color: #fff;
+    }
+  }
+  .shop-list {
+    height: 440px;
+    @media (min-width: 1200px) {
+      height: 520px;
+    }
+    .shop-list-img {
+      height: 300px;
+      @media (min-width: 1200px) {
+        height: 380px;
       }
     }
   }
