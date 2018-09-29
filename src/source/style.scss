@@ -1,11 +1,14 @@
 @import '@material/layout-grid/mdc-layout-grid';
-
 #app {
-  font-family: 'Avenir', Helvetica, Arial, "WenQuanYi Zen Hei","儷黑 Pro","LiHei Pro","黑體-繁","Heiti TC","微軟正黑體","Microsoft JhengHei", sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
 }
 
 .w100 {
   width: 100%;
+}
+
+.blur {
+  filter: blur(5px);
 }
 
 header {
@@ -14,7 +17,6 @@ header {
     font-weight: bold;
     text-align: center;
     color: #3F5D45;
-  
     &:hover {
       cursor: pointer;
       color: #fff;
@@ -28,33 +30,53 @@ header {
 
 main {
   .menu {
+    margin-top: -145px;
     margin-left: 7rem;
     margin-right: 7rem;
     @supports (display: grid) {
-      grid-gap: 2px;;
+      grid-gap: 2px;
     }
-
     .mdc-layout-grid__cell {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       background-color: #3F5D45;
-      >.menu-item {
+      >.menu-text {
         position: absolute;
         font-size: 24px;
         font-weight: bold;
-          color: #fff;
-      }
-      >img {
-        opacity: 0.3;
+        color: #fff;
       }
     }
-
     .mdc-layout-grid__cell:first-child {
       background-color: #FFE180;
-      >.menu-item {
+      >.menu-text {
         color: #3F5D45;
+      }
+    }
+    .mdc-layout-grid__cell {
+      >.square {
+        background-position: center;
+        background-size: 100%;
+        width: 100%;
+        padding-bottom: 100%;
+        opacity: 0.15;
+      }
+    }
+    .mdc-layout-grid__cell:nth-child(1) {
+      >.square {
+        background-image: url("../assets/images/brooke-lark-230642-unsplash.jpg");
+      }
+    }
+    .mdc-layout-grid__cell:nth-child(2) {
+      >.square {
+        background-image: url("../assets/images/whitney-wright-356670-unsplash.jpg");
+      }
+    }
+    .mdc-layout-grid__cell:nth-child(3) {
+      >.square {
+        background-image: url("../assets/images/food-photographer-jennifer-pallian-306919-unsplash.jpg");
       }
     }
   }
