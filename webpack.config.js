@@ -1,4 +1,5 @@
 const path = require('path');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: './src/js/app.js',
@@ -14,27 +15,35 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015'],
+        },
+      },
+      {
         test: /\.css$/,
         use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
         ],
       },
       {
         test: /\.(scss|sass)$/,
         use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
           {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [autoprefixer()],
+            },
           },
           {
             loader: 'sass-loader',
+            options: {
+              includePaths: ['./node_modules'],
+            },
           },
         ],
       },
@@ -44,4 +53,5 @@ module.exports = {
       },
     ],
   },
+  mode: 'production',
 };

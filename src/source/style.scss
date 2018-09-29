@@ -1,55 +1,60 @@
-#header {
-  display: flex;
-  justify-content: space-between;
-  #title {
-    >h4 {
-      display: inline-block;
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-  }
-  #menu {
-    display: flex;
-    align-items: center;
-    >div {
-      padding-left: 1rem;
-      padding-right: 1rem;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      margin-left: 1rem;
-      margin-right: 1rem;
-      &:hover {
-        background-color: #aaa;
-      }
+@import '@material/layout-grid/mdc-layout-grid';
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, "WenQuanYi Zen Hei","儷黑 Pro","LiHei Pro","黑體-繁","Heiti TC","微軟正黑體","Microsoft JhengHei", sans-serif;
+}
+
+.w100 {
+  width: 100%;
+}
+
+header {
+  .menu-item {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #3F5D45;
+  
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      background-color: #3F5D45;
+      border-radius: 10px;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
     }
   }
 }
 
-#main {
-  .big-image {
-    >img {
-      width: 100%;
+main {
+  .menu {
+    margin-left: 7rem;
+    margin-right: 7rem;
+    @supports (display: grid) {
+      grid-gap: 2px;;
     }
-  }
-  .food-menu {
-    width: 100%;
-    display: flex;
-    >div {
-      width: 100%;
+
+    .mdc-layout-grid__cell {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-left: 1rem;
-      margin-right: 1rem;
-      margin-top: -6rem;
-      background-color: #FFE180;
+      background-color: #3F5D45;
+      >.menu-item {
+        position: absolute;
+        font-size: 24px;
+        font-weight: bold;
+          color: #fff;
+      }
       >img {
-        width: 100%;
         opacity: 0.3;
       }
-      >span {
-        position: absolute;
+    }
+
+    .mdc-layout-grid__cell:first-child {
+      background-color: #FFE180;
+      >.menu-item {
+        color: #3F5D45;
       }
     }
   }

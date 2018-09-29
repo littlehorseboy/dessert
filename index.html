@@ -5,39 +5,68 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>dessert</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
   <div id="app">
-    <header id="header">
-      <div id="title">
-        <h4>S*</h4>
-        <h4>Sweetaste*</h4>
-      </div>
-      <div id="menu">
-        <div>首頁</div>
-        <div>甜點</div>
-        <div>登入</div>
-        <div>購物車</div>
+    <header class="mdc-layout-grid mdc-layout-grid--align-center">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <img src="src/assets/images/logo-all-dark.svg">
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4"></div>
+        <div class="menu-item mdc-layout-grid__cell mdc-layout-grid__cell--span-1 mdc-layout-grid__cell--align-middle">
+          首頁
+        </div>
+        <div class="menu-item mdc-layout-grid__cell mdc-layout-grid__cell--span-1 mdc-layout-grid__cell--align-middle">
+          甜點
+        </div>
+        <div class="menu-item mdc-layout-grid__cell mdc-layout-grid__cell--span-1 mdc-layout-grid__cell--align-middle">
+          登入
+        </div>
+        <div class="menu-item mdc-layout-grid__cell mdc-layout-grid__cell--span-1 mdc-layout-grid__cell--align-middle">
+          <i class="material-icons">shopping_cart</i>
+        </div>
       </div>
     </header>
 
-    <main id="main">
-      <div class="big-image">
-        <img src="src/assets/images/annie-spratt-133872-unsplash.jpg">
+    <main class="mdc-layout-grid">
+      <!-- 大圖 -->
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <img class="w100" src="src/assets/images/annie-spratt-133872-unsplash.jpg">
+        </div>
       </div>
-      <div class="food-menu">
-        <div class="food-menu__one">
-          <span>本日精選</span>
-          <img src="src/assets/images/annie-spratt-133872-unsplash.jpg">
+
+      <!-- menu -->
+      <div class="menu mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <div class="menu-item">
+            <div>本</div>
+            <div>日</div>
+            <div>精</div>
+            <div>選</div>
+          </div>
+          <img class="w100" src="src/assets/images/annie-spratt-133872-unsplash.jpg">
         </div>
-        <div class="food-menu__two">
-          <span>人氣推薦</span>
-          <img src="src/assets/images/annie-spratt-133872-unsplash.jpg">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <div class="menu-item">
+            <div>人</div>
+            <div>氣</div>
+            <div>推</div>
+            <div>薦</div>
+          </div>
+          <img class="w100" src="src/assets/images/annie-spratt-133872-unsplash.jpg">
         </div>
-        <div class="food-menu__three">
-          <span>新品上市</span>
-          <img src="src/assets/images/annie-spratt-133872-unsplash.jpg">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+          <div class="menu-item">
+            <div>新</div>
+            <div>品</div>
+            <div>上</div>
+            <div>市</div>
+          </div>
+          <img class="w100" src="src/assets/images/annie-spratt-133872-unsplash.jpg">
         </div>
       </div>
     </main>
