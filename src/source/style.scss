@@ -1,6 +1,7 @@
 @import '@material/layout-grid/mdc-layout-grid';
 @import '@material/card/mdc-card';
-
+// @import '@material/button/mdc-button';
+@import '@material/textfield/mdc-text-field';
 #app {
   font-family: 'Avenir', Helvetica, Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
 }
@@ -18,6 +19,9 @@
 }
 
 header {
+  a {
+    text-decoration: none;
+  }
   .menu-item {
     font-size: 16px;
     font-weight: bold;
@@ -27,14 +31,17 @@ header {
       cursor: pointer;
       color: #fff;
       background-color: #3F5D45;
-      border-radius: 10px;
-      padding-top: 0.3rem;
-      padding-bottom: 0.3rem;
+      border-radius: 5px;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
     }
   }
 }
 
 main {
+  >.mdc-layout-grid:first-child {
+    padding-top: 0;
+  }
   .menu {
     margin-top: -145px;
     margin-left: 7rem;
@@ -109,7 +116,7 @@ main {
       background-repeat: no-repeat;
     }
     .article-img-text {
-      margin-top: -18%;
+      margin-top: -24%;
       height: 100%;
       background-image: url("../assets/images/lg-為什麼選擇了做甜點.svg");
       background-position: center;
@@ -125,7 +132,7 @@ main {
       background-repeat: no-repeat;
     }
     .article-img-text2 {
-      margin-top: -18%;
+      margin-top: -24%;
       height: 100%;
       background-image: url("../assets/images/lg-為什麼一定要吃甜點.svg");
       background-position: center;
@@ -145,15 +152,104 @@ main {
     }
   }
   .shop-list {
-    height: 440px;
-    @media (min-width: 1200px) {
-      height: 520px;
-    }
     .shop-list-img {
-      height: 300px;
-      @media (min-width: 1200px) {
-        height: 380px;
+      width: 100%;
+      max-height: 700px;
+      object-fit: cover;
+    }
+    .custom-card-content {
+      text-align: center;
+      >div:first-child {
+        display: flex;
+        justify-content: space-around;
+        color: #3F5D45;
+        font-size: 20px;
+        >div {
+          padding-top: 14px;
+          padding-bottom: 14px;
+        }
+        >div:last-child {
+          font-weight: bold;
+        }
       }
+      >div:last-child {
+        cursor: pointer;
+        background-color: #EAF0ED;
+        color: #3F5D45;
+        font-size: 24px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+    }
+  }
+}
+
+footer {
+  .subscribe-mail {
+    background-color: #3F5D45;
+    &__subtitle {
+      display: flex;
+      align-items: center;
+      >img {
+        width: 40px;
+        height: 40px;
+      }
+      >span {
+        margin-left: 1rem;
+        font-size: 24px;
+        color: #fff;
+      }
+    }
+    &__input {
+      .mdc-text-field {
+        width: 100%;
+        button {
+          background-color: #FFE180;
+          border-color: transparent;
+          >i {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  .footer-detail {
+    &__detail-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &__img {
+        height: 30px;
+      }
+      &__detail {
+        color: #3F5D45;
+        font-size: 16px;
+        >p {
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+    &__img-wrapper {
+      text-align: right;
+      &__img {
+        height: 220px;
+      }
+    }
+    &__link-wrapper {
+      >img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    &__copyright-wrapper {
+      text-align: right;
+      color: #3F5D45;
+      font-size: 16px;
+    }
+    .mdc-layout-grid__inner:last-child {
+      margin-top: 2rem;
     }
   }
 }
