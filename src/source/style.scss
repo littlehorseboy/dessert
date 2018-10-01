@@ -1,60 +1,30 @@
 @import '@material/layout-grid/mdc-layout-grid';
 @import '@material/card/mdc-card';
-// @import '@material/button/mdc-button';
 @import '@material/textfield/mdc-text-field';
-#app {
-  font-family: 'Avenir', Helvetica, Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
-}
-
-.w100 {
-  width: 100%;
-}
-
-.h100 {
-  height: 100%;
-}
-
-.blur {
-  filter: blur(5px);
-}
-
-header {
-  a {
-    text-decoration: none;
-  }
-  .menu-item {
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    color: #3F5D45;
-    &:hover {
-      cursor: pointer;
-      color: #fff;
-      background-color: #3F5D45;
-      border-radius: 5px;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-    }
-  }
-}
+@import './layout';
+@import './public';
 
 main {
   >.mdc-layout-grid:first-child {
     padding-top: 0;
   }
+
   .menu {
     margin-top: -145px;
     margin-left: 7rem;
     margin-right: 7rem;
+
     @supports (display: grid) {
       grid-gap: 2px;
     }
+
     .mdc-layout-grid__cell {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       background-color: #3F5D45;
+
       >.menu-text {
         position: absolute;
         font-size: 24px;
@@ -62,12 +32,15 @@ main {
         color: #fff;
       }
     }
+
     .mdc-layout-grid__cell:first-child {
       background-color: #FFE180;
+
       >.menu-text {
         color: #3F5D45;
       }
     }
+
     .mdc-layout-grid__cell {
       >.square {
         background-position: center;
@@ -78,35 +51,43 @@ main {
         opacity: 0.15;
       }
     }
+
     .mdc-layout-grid__cell:nth-child(1) {
       >.square {
         background-image: url("../assets/images/brooke-lark-230642-unsplash.jpg");
       }
     }
+
     .mdc-layout-grid__cell:nth-child(2) {
       >.square {
         background-image: url("../assets/images/whitney-wright-356670-unsplash.jpg");
       }
     }
+
     .mdc-layout-grid__cell:nth-child(3) {
       >.square {
         background-image: url("../assets/images/food-photographer-jennifer-pallian-306919-unsplash.jpg");
       }
     }
   }
+
   .article {
     height: 420px;
+
     @media (min-width: 1200px) {
       height: 500px;
     }
+
     background-color: #EAF0ED;
     margin-top: 7rem;
     margin-bottom: 7rem;
+
     .article-text {
       writing-mode: vertical-rl;
       font-size: 16px;
       color: #8DA291;
     }
+
     .article-img {
       margin-top: -7%;
       height: 124%;
@@ -115,6 +96,7 @@ main {
       background-size: 100%;
       background-repeat: no-repeat;
     }
+
     .article-img-text {
       margin-top: -24%;
       height: 100%;
@@ -123,6 +105,7 @@ main {
       background-size: fill;
       background-repeat: no-repeat;
     }
+
     .article-img2 {
       margin-top: -7%;
       height: 124%;
@@ -131,6 +114,7 @@ main {
       background-size: 100%;
       background-repeat: no-repeat;
     }
+
     .article-img-text2 {
       margin-top: -24%;
       height: 100%;
@@ -139,6 +123,7 @@ main {
       background-size: fill;
       background-repeat: no-repeat;
     }
+
     .article-img-text3 {
       margin-top: -18%;
       height: 100%;
@@ -147,31 +132,38 @@ main {
       background-size: fill;
       background-repeat: no-repeat;
     }
+
     &.article-empty {
       background-color: #fff;
     }
   }
+
   .shop-list {
     .shop-list-img {
       width: 100%;
       max-height: 700px;
       object-fit: cover;
     }
+
     .custom-card-content {
       text-align: center;
+
       >div:first-child {
         display: flex;
         justify-content: space-around;
         color: #3F5D45;
         font-size: 20px;
+
         >div {
           padding-top: 14px;
           padding-bottom: 14px;
         }
+
         >div:last-child {
           font-weight: bold;
         }
       }
+
       >div:last-child {
         cursor: pointer;
         background-color: #EAF0ED;
@@ -180,76 +172,6 @@ main {
         padding-top: 16px;
         padding-bottom: 16px;
       }
-    }
-  }
-}
-
-footer {
-  .subscribe-mail {
-    background-color: #3F5D45;
-    &__subtitle {
-      display: flex;
-      align-items: center;
-      >img {
-        width: 40px;
-        height: 40px;
-      }
-      >span {
-        margin-left: 1rem;
-        font-size: 24px;
-        color: #fff;
-      }
-    }
-    &__input {
-      .mdc-text-field {
-        width: 100%;
-        button {
-          background-color: #FFE180;
-          border-color: transparent;
-          >i {
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
-          }
-        }
-      }
-    }
-  }
-  .footer-detail {
-    &__detail-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      &__img {
-        height: 30px;
-      }
-      &__detail {
-        color: #3F5D45;
-        font-size: 16px;
-        >p {
-          margin-top: 0.5rem;
-          margin-bottom: 0.5rem;
-        }
-      }
-    }
-    &__img-wrapper {
-      text-align: right;
-      &__img {
-        height: 220px;
-      }
-    }
-    &__link-wrapper {
-      >img {
-        width: 32px;
-        height: 32px;
-      }
-    }
-    &__copyright-wrapper {
-      text-align: right;
-      color: #3F5D45;
-      font-size: 16px;
-    }
-    .mdc-layout-grid__inner:last-child {
-      margin-top: 2rem;
     }
   }
 }
