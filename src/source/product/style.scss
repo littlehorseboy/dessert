@@ -1,0 +1,102 @@
+@import '@material/layout-grid/mdc-layout-grid';
+@import '@material/card/mdc-card';
+@import '@material/textfield/mdc-text-field';
+@import '@material/image-list/mdc-image-list';
+@import '../layout';
+@import '../public';
+main {
+  >.mdc-layout-grid:first-child {
+    padding-top: 0;
+  }
+  .shop-list {
+    .product-category {
+      >div {
+        cursor: pointer;
+        height: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #3F5D45;
+        &.subtitle {
+          background-color: #3F5D45;
+          color: #fff;
+        }
+        &.active {
+          background-color: #EAF0ED;
+        }
+        &:not(.subtitle):hover {
+          background-color: #EAF0ED;
+        }
+      }
+    }
+    .product-list {
+      @include mdc-image-list-masonry-columns(2);
+      @media (max-width: 599px) {
+        @include mdc-image-list-masonry-columns(1);
+      }
+      .shop-list-img {
+        width: 100%;
+        max-height: 700px;
+        object-fit: cover;
+      }
+      .custom-card-content {
+        text-align: center;
+        >div:first-child {
+          display: flex;
+          justify-content: space-around;
+          color: #3F5D45;
+          font-size: 20px;
+          >div {
+            padding-top: 14px;
+            padding-bottom: 14px;
+          }
+          >div:last-child {
+            font-weight: bold;
+          }
+        }
+        >div:last-child {
+          cursor: pointer;
+          background-color: #EAF0ED;
+          color: #3F5D45;
+          font-size: 24px;
+          padding-top: 16px;
+          padding-bottom: 16px;
+        }
+      }
+    }
+    .product-navigation {
+      display: flex;
+      justify-content: flex-end;
+      @media (max-width: 839px) {
+        justify-content: center;
+      }
+      >div {
+        display: flex;
+        justify-content: space-around;
+        >div {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 60px;
+          height: 60px;
+          font-weight: bold;
+          border: 1px solid #EAF0ED;
+          border-left: none;
+          &:first-child {
+            border-left: 1px solid #EAF0ED;
+          }
+          &.active {
+            background-color: #3F5D45;
+            color: #fff;
+          }
+          &:not(.active):hover {
+            background-color: #EAF0ED;
+          }
+        }
+      }
+    }
+  }
+}
