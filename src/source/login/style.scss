@@ -1,0 +1,38 @@
+@import '@material/layout-grid/mdc-layout-grid';
+@import '@material/textfield/mdc-text-field';
+@import '../layout';
+@import '../public';
+
+main {
+  >.mdc-layout-grid:first-child {
+    padding-top: 0;
+  }
+
+  .shop-list {
+    .product-category {
+      >div {
+        cursor: pointer;
+        height: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #3F5D45;
+
+        &.subtitle {
+          background-color: #3F5D45;
+          color: #fff;
+        }
+
+        &.active {
+          background-color: #EAF0ED;
+        }
+
+        &:not(.subtitle):hover {
+          background-color: #EAF0ED;
+        }
+      }
+    }
+  }
+}

@@ -28,4 +28,17 @@ module.exports = [
     module: webpack_module.module,
     mode: 'production',
   },
+  {
+    entry: './src/js/login/login.js',
+    output: {
+      path: path.resolve(__dirname, './dist'),
+      filename: 'bundle-login.js',
+    },
+    devtool: '#inline-source-map',
+    devServer: {
+      contentBase: '.',
+    },
+    module: webpack_module.module,
+    mode: 'production',
+  },
 ];
