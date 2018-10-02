@@ -34,19 +34,51 @@
     </header>
 
     <main>
-      <div class="shop-list mdc-layout-grid">
+      <div class="mdc-layout-grid mdc-layout-grid--align-center">
         <div class="mdc-layout-grid__inner">
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-            <div class="product-category mdc-card">
-              <div class="subtitle">甜點類別</div>
-              <div class="active">所有甜點（48）</div>
-              <div>本日精選（10）</div>
-              <div>人氣推薦（26）</div>
-              <div>新品上市（12）</div>
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+            <div class="mdc-card">
+              <div>會員登入</div>
+              <div>
+                <div class="mdc-text-field text-field mdc-text-field--with-leading-icon mdc-ripple-upgraded">
+                  <i class="material-icons mdc-text-field__icon">event</i>
+                  <input class="mdc-text-field__input">
+                  <label class="mdc-floating-label" for="text-field--leading">Standard</label>
+                  <div class="mdc-line-ripple" style="transform-origin: 71.5px center 0px;"></div>
+                </div>
+              </div>
+              <div>
+                <div class="mdc-text-field text-field mdc-text-field--with-leading-icon mdc-ripple-upgraded">
+                  <i class="material-icons mdc-text-field__icon">event</i>
+                  <input id="" class="mdc-text-field__input">
+                  <label class="mdc-floating-label" for="text-field--leading">Standard</label>
+                  <div class="mdc-line-ripple" style="transform-origin: 71.5px center 0px;"></div>
+                </div>
+              </div>
+              <div>
+                <div class="mdc-form-field">
+                  <div class="mdc-checkbox">
+                    <input type="checkbox" id="my-checkbox" class="mdc-checkbox__native-control" />
+                    <div class="mdc-checkbox__background">
+                      <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                        <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                      </svg>
+                      <!-- <div class="mdc-checkbox__mixedmark"></div> -->
+                    </div>
+                  </div>
+                  <label for="my-checkbox">記住我</label>
+                </div>
+              </div>
+              <div>登入帳號</div>
             </div>
           </div>
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+            <div class="mdc-card">
+              <div>連結社群帳號</div>
+              <div><img src="src/assets/images/ic-facebook-logotype.svg"></div>
+              <div><img src="src/assets/images/ic-google.svg"></div>
+              <div><img src="src/assets/images/ic-yahoo.svg"></div>
+            </div>
           </div>
         </div>
       </div>
