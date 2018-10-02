@@ -35,27 +35,27 @@
 
     <main>
       <div class="mdc-layout-grid mdc-layout-grid--align-center">
-        <div class="mdc-layout-grid__inner">
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-            <div class="mdc-card">
-              <div>會員登入</div>
-              <div>
+        <div class="login mdc-layout-grid__inner">
+          <div class="login__left mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+            <div>
+              <div class="login__left__title">會員登入</div>
+              <div class="login__left__input">
                 <div class="mdc-text-field text-field mdc-text-field--with-leading-icon mdc-ripple-upgraded">
-                  <i class="material-icons mdc-text-field__icon">event</i>
-                  <input class="mdc-text-field__input">
-                  <label class="mdc-floating-label" for="text-field--leading">Standard</label>
-                  <div class="mdc-line-ripple" style="transform-origin: 71.5px center 0px;"></div>
+                  <i class="material-icons mdc-text-field__icon">person</i>
+                  <input id="mail" class="mdc-text-field__input">
+                  <label for="mail" class="mdc-floating-label">電子信箱 / 手機號碼</label>
+                  <div class="mdc-line-ripple"></div>
                 </div>
               </div>
-              <div>
+              <div class="login__left__input">
                 <div class="mdc-text-field text-field mdc-text-field--with-leading-icon mdc-ripple-upgraded">
-                  <i class="material-icons mdc-text-field__icon">event</i>
-                  <input id="" class="mdc-text-field__input">
-                  <label class="mdc-floating-label" for="text-field--leading">Standard</label>
-                  <div class="mdc-line-ripple" style="transform-origin: 71.5px center 0px;"></div>
+                  <i class="material-icons mdc-text-field__icon">vpn_key</i>
+                  <input id="password" class="mdc-text-field__input">
+                  <label for="password" class="mdc-floating-label">請輸入使用者密碼</label>
+                  <div class="mdc-line-ripple"></div>
                 </div>
               </div>
-              <div>
+              <div class="login__left__checkbox">
                 <div class="mdc-form-field">
                   <div class="mdc-checkbox">
                     <input type="checkbox" id="my-checkbox" class="mdc-checkbox__native-control" />
@@ -69,12 +69,12 @@
                   <label for="my-checkbox">記住我</label>
                 </div>
               </div>
-              <div>登入帳號</div>
+              <div class="login__left__submit">登入帳號</div>
             </div>
           </div>
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-            <div class="mdc-card">
-              <div>連結社群帳號</div>
+          <div class="login__right mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+            <div>
+              <div class="login__right__title">—— 連結社群帳號 ——</div>
               <div><img src="src/assets/images/ic-facebook-logotype.svg"></div>
               <div><img src="src/assets/images/ic-google.svg"></div>
               <div><img src="src/assets/images/ic-yahoo.svg"></div>

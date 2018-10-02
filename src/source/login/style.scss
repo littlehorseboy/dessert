@@ -4,10 +4,69 @@
 @import '@material/checkbox/mdc-checkbox';
 @import '../layout';
 @import '../public';
-
 main {
   >.mdc-layout-grid:first-child {
     padding-top: 0;
   }
-
+  .login {
+    margin: 0 auto;
+    max-width: 800px;
+    grid-gap: 0;
+    &__left {
+      text-align: center;
+      background-color: #3F5D45;
+      &__title {
+        font-size: 36px;
+        font-weight: bold;
+        color: #EAF0ED;
+        padding-top: 2.2rem;
+        padding-bottom: 2.2rem;
+      }
+      &__input {
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+      }
+      &__checkbox {
+        margin-top: -0.3rem;
+        margin-bottom: -0.3rem;
+        label {
+          color: #EAF0ED;
+          font-weight: bold;
+        }
+      }
+      &__submit {
+        cursor: pointer;
+        margin-top: 1.5rem;
+        background-color: #FFE180;
+        color: #3F5D45;
+        font-size: 24px;
+        font-weight: bold;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+    }
+    &__right {
+      text-align: center;
+      margin-top: 0.8rem;
+      margin-bottom: 0.8rem;
+      background-color: #EAF0ED;
+      &__title {
+        font-size: 24px;
+        color: #8DA291;
+        padding-top: 2.2rem;
+        padding-bottom: 2.2rem;
+      }
+      >div>div:not(.login__right__title) {
+        cursor: pointer;
+        background-color: #fff;
+        margin: 0 auto 1rem auto;
+        max-width: 330px;
+        >img {
+          height: 30px;
+          padding-top: 0.7rem;
+          padding-bottom: 0.7rem;
+        }
+      }
+    }
+  }
 }
