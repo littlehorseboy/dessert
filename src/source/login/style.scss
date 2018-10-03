@@ -33,6 +33,9 @@ main {
           color: #EAF0ED;
           font-weight: bold;
         }
+        .mdc-checkbox__background {
+          border-color: #fff !important;
+        }
       }
       &__submit {
         cursor: pointer;
@@ -43,6 +46,9 @@ main {
         font-weight: bold;
         padding-top: 1rem;
         padding-bottom: 1rem;
+        &:hover {
+          background-color: rgb(253, 214, 84)
+        }
       }
     }
     &__right {

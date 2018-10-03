@@ -34,50 +34,91 @@
     </header>
 
     <main>
-      <div class="mdc-layout-grid mdc-layout-grid--align-center">
-        <div class="login mdc-layout-grid__inner">
-          <div class="login__left mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-            <div>
-              <div class="login__left__title">會員登入</div>
-              <div class="login__left__input">
-                <div class="mdc-text-field text-field mdc-text-field--with-leading-icon mdc-ripple-upgraded">
-                  <i class="material-icons mdc-text-field__icon">person</i>
-                  <input id="mail" class="mdc-text-field__input">
-                  <label for="mail" class="mdc-floating-label">電子信箱 / 手機號碼</label>
-                  <div class="mdc-line-ripple"></div>
+      <div class="mdc-layout-grid">
+        <div class="cart mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+            <div class="cart-list">
+              <div class="cart-list__title">您的購物車</div>
+              <div class="cart-list__item">
+                <div>
+                  <img class="cart-list__item__img" src="src/assets/images/brenda-godinez-367708-unsplash.jpg">
+                </div>
+                <div>
+                  <div class="cart-list__item__name">焦糖馬卡龍</div>
+                  <div class="cart-list__item__price">NT$ 450</div>
+                </div>
+                <div class="cart-list__item__count">
+                  <div>-</div>
+                  <div>2</div>
+                  <div>+</div>
+                </div>
+                <div class="cart-list__item__subtotal">NT$ 900</div>
+                <div class="cart-list__item__button">
+                  <i class="material-icons">
+                    delete_outline
+                  </i>
                 </div>
               </div>
-              <div class="login__left__input">
-                <div class="mdc-text-field text-field mdc-text-field--with-leading-icon mdc-ripple-upgraded">
-                  <i class="material-icons mdc-text-field__icon">vpn_key</i>
-                  <input id="password" class="mdc-text-field__input">
-                  <label for="password" class="mdc-floating-label">請輸入使用者密碼</label>
-                  <div class="mdc-line-ripple"></div>
+              <div class="cart-list__item">
+                <div>
+                  <img class="cart-list__item__img" src="src/assets/images/food-photographer-jennifer-pallian-650641-unsplash.jpg">
+                </div>
+                <div>
+                  <div class="cart-list__item__name">焦糖馬卡龍</div>
+                  <div class="cart-list__item__price">NT$ 450</div>
+                </div>
+                <div class="cart-list__item__count">
+                  <div>-</div>
+                  <div>2</div>
+                  <div>+</div>
+                </div>
+                <div class="cart-list__item__subtotal">NT$ 900</div>
+                <div class="cart-list__item__button">
+                  <i class="material-icons">
+                    delete_outline
+                  </i>
                 </div>
               </div>
-              <div class="login__left__checkbox">
-                <div class="mdc-form-field">
-                  <div class="mdc-checkbox">
-                    <input type="checkbox" id="my-checkbox" class="mdc-checkbox__native-control" />
-                    <div class="mdc-checkbox__background">
-                      <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                        <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                      </svg>
-                      <!-- <div class="mdc-checkbox__mixedmark"></div> -->
-                    </div>
-                  </div>
-                  <label for="my-checkbox">記住我</label>
+              <div class="cart-list__item">
+                <div>
+                  <img class="cart-list__item__img" src="src/assets/images/brooke-lark-96398-unsplash.jpg">
+                </div>
+                <div>
+                  <div class="cart-list__item__name">焦糖馬卡龍</div>
+                  <div class="cart-list__item__price">NT$ 450</div>
+                </div>
+                <div class="cart-list__item__count">
+                  <div>-</div>
+                  <div>2</div>
+                  <div>+</div>
+                </div>
+                <div class="cart-list__item__subtotal">NT$ 900</div>
+                <div class="cart-list__item__button">
+                  <i class="material-icons">
+                    delete_outline
+                  </i>
                 </div>
               </div>
-              <div class="login__left__submit">登入帳號</div>
             </div>
           </div>
-          <div class="login__right mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-            <div>
-              <div class="login__right__title">—— 連結社群帳號 ——</div>
-              <div><img src="src/assets/images/ic-facebook-logotype.svg"></div>
-              <div><img src="src/assets/images/ic-google.svg"></div>
-              <div><img src="src/assets/images/ic-yahoo.svg"></div>
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+            <div class="cart-summary">
+              <div>
+                <div class="cart-summary__title">訂單摘要</div>
+                <div class="cart-summary__subtotal">
+                  <div>小計</div>
+                  <div>NT$ 2,700</div>
+                </div>
+                <div class="cart-summary__subtotal">
+                  <div>運費</div>
+                  <div>NT$ 300</div>
+                </div>
+                <div class="cart-summary__total">
+                  <div>總計</div>
+                  <div>NT$ 3,000</div>
+                </div>
+              </div>
+              <div class="cart-summary__submit">結帳</div>
             </div>
           </div>
         </div>
@@ -140,7 +181,7 @@
     </footer>
     <!-- end footer -->
   </div>
-  <script src="./dist/bundle-login.js"></script>
+  <script src="./dist/bundle-cart.js"></script>
 </body>
 
 </html>
