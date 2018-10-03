@@ -90,6 +90,8 @@ main {
       }
       &__submit {
         cursor: pointer;
+        display: block;
+        text-decoration: none;
         text-align: center;
         margin-top: 1.5rem;
         background-color: #FFE180;

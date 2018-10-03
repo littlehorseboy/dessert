@@ -35,90 +35,92 @@
 
     <main>
       <div class="mdc-layout-grid">
-        <div class="cart mdc-layout-grid__inner">
+        <div class="checkout mdc-layout-grid__inner">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-            <div class="cart-list">
-              <div class="cart-list__title">您的購物車</div>
-              <div class="cart-list__item">
-                <div>
-                  <img class="cart-list__item__img" src="src/assets/images/brenda-godinez-367708-unsplash.jpg">
+            <div class="checkout-form">
+              <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                  <div class="checkout-form__title">運送</div>
                 </div>
-                <div>
-                  <div class="cart-list__item__name">焦糖馬卡龍</div>
-                  <div class="cart-list__item__price">NT$ 450</div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                  <label for="">姓氏</label>
+                  <input>
                 </div>
-                <div class="cart-list__item__count">
-                  <div>-</div>
-                  <div>2</div>
-                  <div>+</div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                  <label for="">名字</label>
+                  <input>
                 </div>
-                <div class="cart-list__item__subtotal">NT$ 900</div>
-                <div class="cart-list__item__button">
-                  <i class="material-icons">
-                    delete_outline
-                  </i>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                  <label for="">電話</label>
+                  <input>
                 </div>
-              </div>
-              <div class="cart-list__item">
-                <div>
-                  <img class="cart-list__item__img" src="src/assets/images/food-photographer-jennifer-pallian-650641-unsplash.jpg">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                  <label for="">地址</label>
+                  <input>
                 </div>
-                <div>
-                  <div class="cart-list__item__name">焦糖馬卡龍</div>
-                  <div class="cart-list__item__price">NT$ 450</div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-bottom">
+                  <input>
                 </div>
-                <div class="cart-list__item__count">
-                  <div>-</div>
-                  <div>2</div>
-                  <div>+</div>
-                </div>
-                <div class="cart-list__item__subtotal">NT$ 900</div>
-                <div class="cart-list__item__button">
-                  <i class="material-icons">
-                    delete_outline
-                  </i>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+                  <input>
                 </div>
               </div>
-              <div class="cart-list__item">
-                <div>
-                  <img class="cart-list__item__img" src="src/assets/images/brooke-lark-96398-unsplash.jpg">
-                </div>
-                <div>
-                  <div class="cart-list__item__name">焦糖馬卡龍</div>
-                  <div class="cart-list__item__price">NT$ 450</div>
-                </div>
-                <div class="cart-list__item__count">
-                  <div>-</div>
-                  <div>2</div>
-                  <div>+</div>
-                </div>
-                <div class="cart-list__item__subtotal">NT$ 900</div>
-                <div class="cart-list__item__button">
-                  <i class="material-icons">
-                    delete_outline
-                  </i>
-                </div>
-              </div>
+              <a class="checkout-form__submit">下一步</a>
             </div>
           </div>
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
-            <div class="cart-summary">
+            <div class="checkout-summary">
               <div>
-                <div class="cart-summary__title">訂單摘要</div>
-                <div class="cart-summary__subtotal">
-                  <div>小計</div>
-                  <div>NT$ 2,700</div>
-                </div>
-                <div class="cart-summary__subtotal">
-                  <div>運費</div>
-                  <div>NT$ 300</div>
-                </div>
-                <div class="cart-summary__total">
-                  <div>總計</div>
-                  <div>NT$ 3,000</div>
+                <div class="checkout-summary__title">訂單摘要</div>
+                <div class="checkout-summary__detail">
+                  <div class="checkout-summary__detail__subtotal">
+                    <div>小計</div>
+                    <div>NT$ 2,700</div>
+                  </div>
+                  <div class="checkout-summary__detail__subtotal">
+                    <div>運費</div>
+                    <div>NT$ 300</div>
+                  </div>
+                  <div class="checkout-summary__detail__total">
+                    <div>總計</div>
+                    <div>NT$ 3,000</div>
+                  </div>
                 </div>
               </div>
-              <a href="checkout.html" class="cart-summary__submit">結帳</a>
+            </div>
+            <div class="checkout-list">
+              <div>
+                <div class="checkout-list__title">購物清單</div>
+                <div class="checkout-list__list">
+                  <div>
+                    <div>
+                      <img class="checkout-list__list__img" src="src/assets/images/brenda-godinez-367708-unsplash.jpg">
+                    </div>
+                    <div>
+                      <div class="checkout-list__list__name">焦糖馬卡龍 (2)</div>
+                      <div class="checkout-list__list__price">NT$ 900</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <img class="checkout-list__list__img" src="src/assets/images/food-photographer-jennifer-pallian-650641-unsplash.jpg">
+                    </div>
+                    <div>
+                      <div class="checkout-list__list__name">焦糖馬卡龍 (2)</div>
+                      <div class="checkout-list__list__price">NT$ 900</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <img class="checkout-list__list__img" src="src/assets/images/brooke-lark-96398-unsplash.jpg">
+                    </div>
+                    <div>
+                      <div class="checkout-list__list__name">焦糖馬卡龍 (2)</div>
+                      <div class="checkout-list__list__price">NT$ 900</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -181,7 +183,7 @@
     </footer>
     <!-- end footer -->
   </div>
-  <script src="./dist/bundle-cart.js"></script>
+  <script src="./dist/bundle-checkout.js"></script>
 </body>
 
 </html>

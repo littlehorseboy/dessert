@@ -54,4 +54,17 @@ module.exports = [
     module: webpack_module.module,
     mode: 'production',
   },
+  {
+    entry: './src/js/checkout/checkout.js',
+    output: {
+      path: path.resolve(__dirname, './dist'),
+      filename: 'bundle-checkout.js',
+    },
+    devtool: '#inline-source-map',
+    devServer: {
+      contentBase: '.',
+    },
+    module: webpack_module.module,
+    mode: 'production',
+  },
 ];
