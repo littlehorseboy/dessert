@@ -28,6 +28,10 @@ main {
         padding-left: 1rem;
         padding-right: 1rem;
         box-sizing: border-box;
+        &::placeholder {
+          font-family: 'Avenir', Helvetica, Arial, "WenQuanYi Zen Hei", "\5137\9ED1 Pro", "LiHei Pro", "\9ED1\9AD4-\7E41", "Heiti TC", "\5FAE\8EDF\6B63\9ED1\9AD4", "Microsoft JhengHei", sans-serif;
+          color: #8DA291;
+        }
       }
       &__submit {
         cursor: pointer;
@@ -42,7 +46,23 @@ main {
         padding-top: 1rem;
         padding-bottom: 1rem;
         &:hover {
-          background-color: rgb(253, 214, 84)
+          background-color: rgb(253, 214, 84);
+        }
+      }
+      &__tab {
+        cursor: pointer;
+        text-align: center;
+        background-color: transparent;
+        color: #EAF0ED;
+        border: 1px solid #EAF0ED;
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        &.active,
+        &:hover {
+          background-color: #EAF0ED;
+          color: #3F5D45;
         }
       }
     }
