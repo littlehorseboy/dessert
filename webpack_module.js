@@ -46,7 +46,26 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        use: 'file-loader?name=[path][name].[ext]',
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              // name: '[path][name].[ext]',
+              name: '[path][hash].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              // minimize: true,
+            },
+          },
+        ],
       },
     ],
   },
