@@ -1,0 +1,43 @@
+@import '@material/layout-grid/mdc-layout-grid';
+@import '@material/card/mdc-card';
+@import '@material/textfield/mdc-text-field';
+@import '@material/image-list/mdc-image-list';
+@import '../layout';
+@import '../public';
+main {
+  >.mdc-layout-grid:first-child {
+    padding-top: 0;
+  }
+  .checkout-success {
+    &__background {
+      background-image: url("../../assets/images/brooke-lark-385507-unsplash.jpg");
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__content {
+      padding-top: 25rem;
+      padding-bottom: 25rem;
+      text-align: center;
+      &__success {
+        padding-bottom: 5rem;
+        >img {
+          height: 50px;
+        }
+      }
+      &__gotoproduct {
+        cursor: pointer;
+        width: 300px;
+        background-color: #FFE180;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 24px;
+        font-weight: bold;
+        color: #3F5D45;
+      }
+    }
+  }
+}

@@ -97,4 +97,23 @@ module.exports = [
     module: webpack_module.module,
     mode: 'production',
   },
+  {
+    entry: './src/js/checkout-success/checkout-success.js',
+    output: {
+      path: path.resolve(__dirname, './dist'),
+      filename: 'bundle-checkout-success.js',
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        filename: 'checkout-success.html',
+        template: 'checkout-success.html',
+      }),
+    ],
+    devtool: '#inline-source-map',
+    devServer: {
+      contentBase: '.',
+    },
+    module: webpack_module.module,
+    mode: 'production',
+  },
 ];

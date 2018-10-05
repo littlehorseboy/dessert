@@ -3,28 +3,25 @@
 @import '@material/textfield/mdc-text-field';
 @import './layout';
 @import './public';
-
 main {
   >.mdc-layout-grid:first-child {
     padding-top: 0;
   }
-
   .menu {
-    margin-top: -145px;
-    margin-left: 7rem;
-    margin-right: 7rem;
-
+    @media (min-width: 840px) {
+      margin-top: -145px;
+      margin-left: 7rem;
+      margin-right: 7rem;
+    }
     @supports (display: grid) {
       grid-gap: 2px;
     }
-
     .mdc-layout-grid__cell {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       background-color: #3F5D45;
-
       >.menu-text {
         position: absolute;
         font-size: 24px;
@@ -32,15 +29,12 @@ main {
         color: #fff;
       }
     }
-
     .mdc-layout-grid__cell:first-child {
       background-color: #FFE180;
-
       >.menu-text {
         color: #3F5D45;
       }
     }
-
     .mdc-layout-grid__cell {
       >.square {
         background-position: center;
@@ -51,52 +45,53 @@ main {
         opacity: 0.15;
       }
     }
-
     .mdc-layout-grid__cell:nth-child(1) {
       >.square {
         background-image: url("../assets/images/brooke-lark-230642-unsplash.jpg");
       }
     }
-
     .mdc-layout-grid__cell:nth-child(2) {
       >.square {
         background-image: url("../assets/images/whitney-wright-356670-unsplash.jpg");
       }
     }
-
     .mdc-layout-grid__cell:nth-child(3) {
       >.square {
         background-image: url("../assets/images/food-photographer-jennifer-pallian-306919-unsplash.jpg");
       }
     }
   }
-
   .article {
-    height: 420px;
-
+    @media (max-width: 839px) {
+      height: 750px;
+    }
+    @media (min-width: 840px) {
+      height: 420px;
+    }
     @media (min-width: 1200px) {
       height: 500px;
     }
-
     background-color: #EAF0ED;
     margin-top: 7rem;
     margin-bottom: 7rem;
-
     .article-text {
       writing-mode: vertical-rl;
       font-size: 16px;
       color: #8DA291;
     }
-
     .article-img {
-      margin-top: -7%;
-      height: 124%;
       background-image: url("../assets/images/le-buzz-576478-unsplash.jpg");
       background-position: center;
       background-size: 100%;
       background-repeat: no-repeat;
+      margin-top: -7%;
+      @media (min-width: 840px) {
+        height: 124%;
+      }
+      @media (max-width: 839px) {
+        height: 400px;
+      }
     }
-
     .article-img-text {
       margin-top: -24%;
       height: 100%;
@@ -105,16 +100,21 @@ main {
       background-size: fill;
       background-repeat: no-repeat;
     }
-
     .article-img2 {
-      margin-top: -7%;
       height: 124%;
       background-image: url("../assets/images/monika-grabkowska-325047-unsplash.jpg");
       background-position: center;
       background-size: 100%;
       background-repeat: no-repeat;
+      @media (min-width: 840px) {
+        margin-top: -7%;
+        height: 124%;
+      }
+      @media (max-width: 839px) {
+        margin-bottom: -7%;
+        height: 400px;
+      }
     }
-
     .article-img-text2 {
       margin-top: -24%;
       height: 100%;
@@ -123,7 +123,6 @@ main {
       background-size: fill;
       background-repeat: no-repeat;
     }
-
     .article-img-text3 {
       margin-top: -18%;
       height: 100%;
@@ -132,38 +131,31 @@ main {
       background-size: fill;
       background-repeat: no-repeat;
     }
-
     &.article-empty {
       background-color: #fff;
     }
   }
-
   .shop-list {
     .shop-list-img {
       width: 100%;
       max-height: 700px;
       object-fit: cover;
     }
-
     .custom-card-content {
       text-align: center;
-
       >div:first-child {
         display: flex;
         justify-content: space-around;
         color: #3F5D45;
         font-size: 20px;
-
         >div {
           padding-top: 14px;
           padding-bottom: 14px;
         }
-
         >div:last-child {
           font-weight: bold;
         }
       }
-
       >div:last-child {
         cursor: pointer;
         background-color: #EAF0ED;

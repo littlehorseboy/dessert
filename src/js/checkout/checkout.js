@@ -50,12 +50,18 @@ checkoutForm__submit.addEventListener('click', () => {
   <input placeholder="12345678">
 </div>`;
     tabs_string.mailing_invoice = `
-<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
   <label for="">地址</label>
-  <input placeholder="example@email.com">
+  <input placeholder="高雄市">
+</div>
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--align-bottom">
+  <input placeholder="新興區">
 </div>
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-  <label for="">統一編號 (選填)</label>
+  <input placeholder="幸福路 520 號">
+</div>
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+  <label for="">統一編號（選填）</label>
   <input placeholder="12345678">
 </div>`;
     checkoutForm.innerHTML = `
@@ -71,20 +77,19 @@ checkoutForm__submit.addEventListener('click', () => {
   </div>
   <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
     <div class="checkout-form__tab-content mdc-layout-grid__inner">
-      ${tabs_string.electronic_invoice}
+      <!-- tabs_string.xxx -->
     </div>
   </div>
 </div>`;
-    const aThree = document.createElement('a');
-    aThree.textContent = '確認結帳';
-    aThree.classList.add('checkout-form__submit');
-    checkoutForm.appendChild(aThree);
+
+    const checkoutForm__tabContent = checkoutForm.querySelector('.checkout-form__tab-content');
+    checkoutForm__tabContent.innerHTML = tabs_string.electronic_invoice;
 
     const tabs = checkoutForm.querySelectorAll('.checkout-form__tab');
     tabs.forEach((tab) => {
       tab.addEventListener('click', () => {
         if (!tab.classList.contains('active')) {
-          const checkoutForm__tabContent = checkoutForm.querySelector('.checkout-form__tab-content');
+          
           checkoutForm__tabContent.innerHTML = `${tabs_string[tab.getAttribute('data-target')]}`;
 
           tabs.forEach((tab_inner) => {
@@ -95,6 +100,15 @@ checkoutForm__submit.addEventListener('click', () => {
           tab.classList.add('active');
         }
       });
+    });
+
+    const aThree = document.createElement('a');
+    aThree.textContent = '確認結帳';
+    aThree.classList.add('checkout-form__submit');
+    checkoutForm.appendChild(aThree);
+
+    aThree.addEventListener('click', () => {
+      location.href = 'checkout-success.html';
     });
   });
 });
