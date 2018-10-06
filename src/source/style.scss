@@ -63,7 +63,7 @@ main {
   }
   .article {
     @media (max-width: 839px) {
-      height: 750px;
+      height: 780px;
     }
     @media (min-width: 840px) {
       height: 420px;
@@ -93,7 +93,9 @@ main {
       }
     }
     .article-img-text {
-      margin-top: -24%;
+      @media (min-width: 840px) {
+        margin-top: -24%;
+      }
       height: 100%;
       background-image: url("../assets/images/lg-為什麼選擇了做甜點.svg");
       background-position: center;
@@ -116,7 +118,9 @@ main {
       }
     }
     .article-img-text2 {
-      margin-top: -24%;
+      @media (min-width: 840px) {
+        margin-top: -24%;
+      }
       height: 100%;
       background-image: url("../assets/images/lg-為什麼一定要吃甜點.svg");
       background-position: center;

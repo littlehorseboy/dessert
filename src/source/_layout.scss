@@ -31,6 +31,9 @@ footer {
     &__subtitle {
       display: flex;
       align-items: center;
+      @media (max-width: 839px) {
+        justify-content: center;
+      }
 
       >img {
         width: 40px;
@@ -99,6 +102,9 @@ footer {
 
     &__copyright-wrapper {
       text-align: right;
+      @media (max-width: 839px) {
+        text-align: left;
+      }
       color: #3F5D45;
       font-size: 16px;
     }

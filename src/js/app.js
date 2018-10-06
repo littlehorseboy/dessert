@@ -2,4 +2,4 @@ import 'normalize-scss/sass/normalize/_import-now.scss';
 import '../source/style.scss';
 import { MDCTextField } from '@material/textfield';
 
-const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
+new MDCTextField(document.querySelector('.mdc-text-field'));
