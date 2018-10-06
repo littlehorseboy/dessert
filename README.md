@@ -12,13 +12,13 @@
 
 嘗試了用 webpack 打包所有的東西來開發
 
-大部分都利用了 material-components-web 提供的東西
+排版上用了 material-components-web 的 Layout Grid 以及 css flex
 
-不過還不懂怎麼把 html 給模組化 :sweat_smile:
+所有的 css 都是在 bundle.js 載入的，會明顯看出網頁樣式慢一步才開始讀取，日後需改善 :sweat_smile:
 
-目前還是每個 html 檔都是獨立的
+也還不懂怎麼自己把 html 給組件化
 
-每個都有自己的進入點 (webpack.config.js 的設定)
+每個 html 檔都是獨立的都有自己的進入點 (webpack.config.js 的設定)
 
 * material-components-web
 
