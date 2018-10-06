@@ -63,7 +63,10 @@ main {
   }
   .article {
     @media (max-width: 839px) {
-      height: 800px;
+      height: 660px;
+    }
+    @media (max-width: 599px) {
+      height: 840px;
     }
     @media (min-width: 840px) {
       height: 420px;

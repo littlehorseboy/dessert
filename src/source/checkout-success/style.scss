@@ -19,6 +19,7 @@ main {
       align-items: center;
     }
     &__content {
+      text-align: center;
       padding-top: 25rem;
       padding-bottom: 25rem;
       @media (max-width: 1279px) {
@@ -37,7 +38,6 @@ main {
         padding-top: 5rem;
         padding-bottom: 5rem;
       }
-      text-align: center;
       &__success {
         padding-bottom: 5rem;
         @media (max-width: 839px) {
