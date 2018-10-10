@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack_module = require('./webpack_module.js');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = [
   {
@@ -12,6 +13,10 @@ module.exports = [
     plugins: [
       new HtmlWebpackPlugin({
         template: 'index.html',
+      }),
+      new MiniCssExtractPlugin({
+        filename: 'index.[name].css',
+        chunkFilename: 'index.[id].css',
       }),
     ],
     devtool: '#inline-source-map',
@@ -32,6 +37,10 @@ module.exports = [
         filename: 'product.html',
         template: 'product.html',
       }),
+      new MiniCssExtractPlugin({
+        filename: 'product.[name].css',
+        chunkFilename: 'product.[id].css',
+      }),
     ],
     devtool: '#inline-source-map',
     devServer: {
@@ -50,6 +59,10 @@ module.exports = [
       new HtmlWebpackPlugin({
         filename: 'login.html',
         template: 'login.html',
+      }),
+      new MiniCssExtractPlugin({
+        filename: 'login.[name].css',
+        chunkFilename: 'login.[id].css',
       }),
     ],
     devtool: '#inline-source-map',
@@ -70,6 +83,10 @@ module.exports = [
         filename: 'cart.html',
         template: 'cart.html',
       }),
+      new MiniCssExtractPlugin({
+        filename: 'cart.[name].css',
+        chunkFilename: 'cart.[id].css',
+      }),
     ],
     devtool: '#inline-source-map',
     devServer: {
@@ -89,6 +106,10 @@ module.exports = [
         filename: 'checkout.html',
         template: 'checkout.html',
       }),
+      new MiniCssExtractPlugin({
+        filename: 'checkout.[name].css',
+        chunkFilename: 'checkout.[id].css',
+      }),
     ],
     devtool: '#inline-source-map',
     devServer: {
@@ -107,6 +128,10 @@ module.exports = [
       new HtmlWebpackPlugin({
         filename: 'checkout-success.html',
         template: 'checkout-success.html',
+      }),
+      new MiniCssExtractPlugin({
+        filename: 'checkout-success.[name].css',
+        chunkFilename: 'checkout-success.[id].css',
       }),
     ],
     devtool: '#inline-source-map',

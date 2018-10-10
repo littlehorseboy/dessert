@@ -1,5 +1,8 @@
 import 'normalize-scss/sass/normalize/_import-now.scss';
 import '../../source/checkout/style.scss';
+import { MDCTextField } from '@material/textfield';
+
+new MDCTextField(document.querySelector('.mdc-text-field'));
 
 const checkoutForm__submit = document.querySelector('.checkout-form__submit');
 checkoutForm__submit.addEventListener('click', () => {

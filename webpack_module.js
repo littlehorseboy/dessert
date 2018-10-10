@@ -1,4 +1,5 @@
 const autoprefixer = require('autoprefixer');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   module: {
@@ -25,7 +26,7 @@ module.exports = {
         test: /\.(scss|sass)$/,
         use: [
           {
-            loader: 'style-loader',
+            loader: MiniCssExtractPlugin.loader,
           },
           {
             loader: 'css-loader',
